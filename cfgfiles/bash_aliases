@@ -1,0 +1,8 @@
+alias ls='ls --color=auto'
+alias l='ls -F'
+alias ll='l -l'
+alias la='l -A'
+alias lla='ll -A'
+alias tree='tree -F --dirsfirst'
+alias treea='tree -a'
+alias tailf='tail -f'
