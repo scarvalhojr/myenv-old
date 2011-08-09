@@ -1,0 +1,24 @@
+#!/bin/bash
+
+read -p "Name: " NAME
+read -p "Email: " EMAIL
+read -p "GitHub username: " GITHUB_USERNAME
+read -p "GitHub token: " GITHUB_TOKEN
+
+cat << EOF
+[user]
+	name = $NAME
+	email = $EMAIL
+[github]
+	user = $GITHUB_USERNAME
+	token = $GITHUB_TOKEN
+[core]
+	editor = vim
+[color]
+	ui = true
+[alias]
+	st = status
+	co = checkout
+	ci = commit
+	br = branch
+EOF
