@@ -1,3 +1,4 @@
+# Aliases
 alias ls='ls --color=auto'
 alias l='ls -F'
 alias ll='l -l'
@@ -6,3 +7,10 @@ alias lla='ll -A'
 alias tree='tree -F --dirsfirst'
 alias treea='tree -a'
 alias tailf='tail -f'
+
+# Bash prompt with Git status
+export PS1='\u@\h \w$(__git_ps1 " (%s)") > '
+export GIT_PS1_SHOWDIRTYSTATE=1
+export GIT_PS1_SHOWUNTRACKEDFILES=1
+export GIT_PS1_SHOWSTASHSTATE=1
+export GIT_PS1_SHOWUPSTREAM=1
