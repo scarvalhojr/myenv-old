@@ -1,1 +1,4 @@
 colorscheme elflord
+set number
+set hlsearch incsearch
+set tabstop=4 shiftwidth=4 expandtab smartindent

@@ -16,9 +16,12 @@ cat << EOF
 	editor = vim
 [color]
 	ui = true
+[branch]
+	autosetuprebase = always
 [alias]
 	st = status
 	co = checkout
 	ci = commit
 	br = branch
+	review = "!die() { echo >&2 \"$@\"; exit 1; }; f() { [ \"$#\" -eq 2 ] || die \"Usage: git review <branch> <topic>\"; git push origin HEAD:refs/for/$1/$2; }; f"
 EOF
