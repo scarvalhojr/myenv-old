@@ -19,9 +19,23 @@ cat << EOF
 [branch]
 	autosetuprebase = always
 [alias]
+ 	ad = add
+ 	ap = stash apply
+ 	br = branch
+ 	ca = commit --amend
+ 	ci = commit
+ 	ct = commit -t /home/sergio/gitcommit.tpl
+ 	co = checkout
+ 	cp = cherry-pick
+ 	fe = fetch
+ 	me = merge
+ 	pl = pull
+ 	ps = push
+ 	ra = rebase --abort
+ 	rb = rebase
+ 	rc = rebase --continue
+ 	rs = rebase --skip
+ 	rv = "!die() { echo >&2 \"$@\"; exit 1; }; f() { [ \"$#\" -eq 2 ] || die \"Usage: git review <branch> <topic>\"; git push origin HEAD:refs/for/$1/$2; }; f"
 	st = status
-	co = checkout
-	ci = commit
-	br = branch
-	review = "!die() { echo >&2 \"$@\"; exit 1; }; f() { [ \"$#\" -eq 2 ] || die \"Usage: git review <branch> <topic>\"; git push origin HEAD:refs/for/$1/$2; }; f"
+ 	sv = stash save
 EOF
